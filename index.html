@@ -1,24 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <meta name="viewpoint"  content="width=device-width, initial-scale=1.0">
     <title>Chore Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <header>
-        <h1>Chose Tracker</h1>
-        <p>select your account to get started</p>
+    <header class="app-header">
+        <div class="header-content">
+            <h1>Chore Tracker</h1>
+            <p class="header-subtitle">Every Chore Completed Earns Money</p>
+        </div>
+        <div class="header-balance" id="header-balance" style="display:none">
+            <span class="balance-label">My balance</span>
+            <span class>="balance-amount" id="header-amount>$0.00</span>
+        </div>
     </header>
+<main id="app">
 
-    <main id="app">
-
-    </main>
-
+    <!-- login screen-->
+     <div id="login-sceen" class="screen">
+        <div class="login-card">
+            <h2>Who's loggin in?</h2>
+            <p>Tap your name to start tracking your chores</p>
+            <div class="kid-buttons" id="kid-buttons">
+                <!-- kids will be added by JS-->
+            </div>
+            <div class="admin-link" id="admin-link">
+                Parent login
+            </div>
+        </div>
+    </div>
+<!--Dashboard Screen-->
+<div id="dashbord-screen" class="screen" style="display:none">
+    <div class="balance-bar">
+        <div class="balance-info">
+            <span class="balance-label">total earned</span>
+            <span class="balance-big" id=balance-display>$0.00</span>
+        </div>
+        <div class="chores-done">
+            <span class="balance-label">Done Today</span>
+            <span class="balance-big" id="today-count">0</span>
+        </div>
+    </div>
+    <div class="tab-bar">
+        <button class="tab active" id="tab-chores"
+        onclick="swithcTab('chores')">Chores</button>
+        <button class="tab" id="tab-history"
+        onclick="swithctab('history')">History</button>
+    </div>
+    <div id="chores-panel">
+        <!--Shores will be added here by JS-->
+    </div>
+    <div id="history-panel">
+        <!--History will be added hereby JS-->
+    </div>
+    <button class="logout-btn" onclick="logout()">Swithc Account</button>
+</div>
+<!-- Admin Screen-->
+ <div id="admin-screen" class="screen" style="display:none;">
+    <h2 class="admin-title">Parent Dashbaord</h2>
+    <p class="admin-subtitle">Review and Pay Out Balanace</p>
+    <div id="admin-kids">
+        <!--Admin kid card added by JS-->
+    </div>
+    <button class="logout-btn" onclick="logout()">Back to Login</button>
+ </div>
+</main>
 <script src="app.js"></script>
 </body>
 </html>
