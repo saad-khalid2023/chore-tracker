@@ -1,1 +1,406 @@
- 
+/* =====================
+Reset and base style
+======================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #939dde;
+    min-height: 100vh;
+    color: #1a1a1a;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+   .app-header {
+        background: #87ca57;
+        color: white;
+        padding: 16px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   }
+
+.app-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header-subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.header-balance {
+    text-align: right;
+}
+
+.balance-label {
+    display: block;
+    font-size: 11px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.balance-amount {
+    font-size: 22px;
+    font-weight: 600;
+    color: #97c459;
+}
+
+/* ================================
+   LOGIN SCREEN
+   ================================ */
+
+.login-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-top: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.login-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.login-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.kid-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kid-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1.5px solid #e8e8e8;
+    background: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    transition: all 0.15s ease;
+}
+
+.kid-btn:hover {
+    background: #f8fdf5;
+    border-color: #27500A;
+    transform: translateY(-1px);
+}
+
+.kid-btn-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kid-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.kid-balance-preview {
+    font-size: 13px;
+    color: #27500A;
+    font-weight: 500;
+}
+
+.admin-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.admin-link:hover {
+    color: #27500A;
+}
+
+/* ================================
+   BALANCE BAR
+   ================================ */
+
+.balance-bar {
+    background: #EAF3DE;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.balance-big {
+    font-size: 32px;
+    font-weight: 700;
+    color: #27500A;
+    display: block;
+}
+
+.chores-done {
+    text-align: right;
+}
+
+.chores-done .balance-label {
+    color: #3B6D11;
+}
+
+.chores-done .balance-big {
+    font-size: 32px;
+}
+
+/* ================================
+   TAB BAR
+   ================================ */
+
+.tab-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1.5px solid #e8e8e8;
+    background: white;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.tab.active {
+    background: #27500A;
+    color: white;
+    border-color: #27500A;
+}
+
+/* ================================
+   CHORE ITEMS
+   ================================ */
+
+.chore-item {
+    background: white;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px solid #e8e8e8;
+}
+
+.chore-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chore-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: #f0f4f0;
+}
+
+.chore-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.chore-amount {
+    font-size: 13px;
+    color: #27500A;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.chore-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.earn-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #27500A;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.earn-btn:hover {
+    background: #3B6D11;
+}
+
+.earn-btn.done {
+    background: #f0f0f0;
+    color: #999;
+    cursor: default;
+}
+
+/* ================================
+   HISTORY
+   ================================ */
+
+.history-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid #e8e8e8;
+}
+
+.history-chore-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.history-date {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.history-amount {
+    font-size: 15px;
+    font-weight: 600;
+    color: #27500A;
+}
+
+/* ================================
+   ADMIN PANEL
+   ================================ */
+
+.admin-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.admin-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.admin-kid-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px solid #e8e8e8;
+}
+
+.admin-kid-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-kid-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.admin-kid-stats {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.admin-balance {
+    font-size: 22px;
+    font-weight: 700;
+    color: #27500A;
+    margin-right: 12px;
+}
+
+.pay-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #FCEBEB;
+    color: #A32D2D;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.pay-btn:hover {
+    background: #f09595;
+    color: white;
+}
+
+/* ================================
+   LOGOUT BUTTON
+   ================================ */
+
+.logout-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1.5px solid #e8e8e8;
+    background: white;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.15s ease;
+}
+
+.logout-btn:hover {
+    border-color: #27500A;
+    color: #27500A;
+}
